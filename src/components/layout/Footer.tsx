@@ -38,7 +38,7 @@ export default function Footer() {
       {/* Content */}
       <div className="relative z-10">
         {/* Newsletter Section */}
-        <div className="max-w-7xl mx-auto px-6 mb-20">
+        <div className="max-w-7xl mx-auto px-6 mb-24">
           <div className="flex flex-col lg:flex-row justify-between items-start gap-10">
             <div className="max-w-lg">
               <h2 className="heading mb-4">Stay Up To Date</h2>
@@ -104,7 +104,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <FooterColumn>
-            <h4 className="text-2xl font-bold mb-8">Quick Links</h4>
+            <h4 className="text-4xl font-bold mb-8">Quick Links</h4>
             <ul className="space-y-4 text-white/80">
               <FooterLink label="Product" />
               <FooterLink label="Games" />
@@ -115,7 +115,7 @@ export default function Footer() {
 
           {/* Explore */}
           <FooterColumn>
-            <h4 className="text-2xl font-bold mb-8">Explore</h4>
+            <h4 className="text-4xl font-bold mb-8">Explore</h4>
             <ul className="space-y-4 text-white/80">
               <FooterLink label="Hardware" />
               <FooterLink label="Solution" />
@@ -125,7 +125,7 @@ export default function Footer() {
 
           {/* Follow Us */}
           <FooterColumn>
-            <h4 className="text-2xl font-bold mb-8">Follow Us</h4>
+            <h4 className="text-4xl font-bold mb-8">Follow Us</h4>
             <ul className="space-y-4 text-white/80 ">
               <FooterLink label="Twitter" />
               <FooterLink label="Facebook" />
@@ -141,7 +141,7 @@ export default function Footer() {
             Copyright © 2026{" "}
             <span className="text-white font-black">Quantum Link</span>
           </p>
-          <div className="flex justify-center gap-8">
+          <div className="flex justify-start md:justify-center gap-8">
             <a href="#" className="hover:text-white/80 transition-colors">
               Terms & Conditions
             </a>
@@ -222,11 +222,11 @@ function FooterLink({ label }: { label: string }) {
     <li className="list-none">
       <a
         href="#"
-        className="group relative flex items-center py-1 text-gray-400 transition-all duration-300 ease-out hover:text-white"
+        className="group relative flex items-center py-1 text-gray-400 transition-all duration-300 ease-in-out hover:text-white"
       >
         <span className="relative flex items-center justify-center overflow-hidden transition-all duration-300 ease-in-out w-0 opacity-0 group-hover:w-4 group-hover:opacity-100 group-hover:mr-3"></span>
 
-        <span className="relative transition-transform duration-300 ease-out group-hover:translate-x-1">
+        <span className="text-lg relative transition-transform duration-300 ease-in-out group-hover:translate-x-1">
           {label}
         </span>
 

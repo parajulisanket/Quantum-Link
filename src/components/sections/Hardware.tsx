@@ -145,7 +145,7 @@ export default function Hardware() {
       <div className="sticky top-0 h-screen overflow-hidden">
         {/* background image */}
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center px-6 md:px-10">
-          <div className="relative h-[82vh] w-full max-w-7xl overflow-hidden rounded-[28px]">
+          <div className="hidden md:flex relative h-[82vh] w-full max-w-7xl overflow-hidden rounded-[28px]">
             <Image
               src="/images/hardware.png"
               alt="Hardware background"
@@ -165,7 +165,7 @@ export default function Hardware() {
 
         <div className="relative z-10 mx-auto grid h-full max-w-7xl grid-cols-1 items-center gap-12 px-6 md:px-10 lg:grid-cols-[1.15fr_0.85fr]">
           {/* left side cards */}
-          <div className="relative h-[650px] w-full">
+          <div className="relative h-[650px] w-full order-2 lg:order-1">
             {hardwareCards.map((card, index) => (
               <HardwareCard
                 key={card.title}
@@ -177,7 +177,7 @@ export default function Hardware() {
           </div>
 
           {/* right side fixed content */}
-          <div className="relative z-20 max-w-[520px] lg:pl-6">
+          <div className="relative z-20 max-w-[520px] lg:pl-6 order-1 lg:order-2">
             <div className="mb-5 flex items-center gap-4 overflow-hidden">
               <span className="animate-line-side" />
               <motion.p
@@ -198,7 +198,7 @@ export default function Hardware() {
 
             <h2 className="heading">Build Your Ultimate Setup</h2>
 
-            <div className="mt-10 flex gap-4">
+            <div className="hidden md:flex mt-10 flex gap-4">
               {hardwareCards.map((_, i) => {
                 const total = hardwareCards.length;
                 const segment = 1 / total;

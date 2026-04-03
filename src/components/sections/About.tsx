@@ -61,7 +61,7 @@ export default function About() {
 
         {/* RIGHT CONTENT SIDE */}
         <div className="max-w-2xl">
-          <div className="mb-5 flex items-center gap-4 overflow-hidden">
+          <div className="mb-5 flex items-center  gap-4 overflow-hidden">
             <span className="animate-line-side" />
 
             <motion.p
@@ -86,7 +86,7 @@ export default function About() {
             <span className="animate-line-side delay-animation" />
           </div>
 
-          <h2 className="max-w-3xl  heading">
+          <h2 className="max-w-3xl heading">
             Building High-Performance Arcade and Gaming Platforms
           </h2>
 

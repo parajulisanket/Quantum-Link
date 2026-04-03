@@ -214,17 +214,7 @@ export default function Navbar() {
         <div className="absolute inset-x-0 top-0 h-[1px] bg-[#292F40]" />
 
         <div className="mx-auto flex min-h-[68px] w-full max-w-7xl items-center justify-between px-4 sm:px-6">
-          {/* LEFT: MENU */}
-          <button
-            type="button"
-            aria-label={mobileOpen ? "Close menu" : "Open menu"}
-            onClick={() => setMobileOpen((prev) => !prev)}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-md border border-white/10 bg-[#202736] text-[#ffd34d] transition duration-300 hover:border-[#ff8a00]/40 hover:bg-[#252d3d] hover:text-[#ff8a00]"
-          >
-            {mobileOpen ? <X size={20} /> : <Menu size={20} />}
-          </button>
-
-          {/* CENTER: LOGO */}
+          {/* left: LOGO */}
           <Link href="/" className="flex items-center justify-center px-2">
             <Image
               src="/images/QL-Logo.png"
@@ -236,14 +226,23 @@ export default function Navbar() {
             />
           </Link>
 
+          {/* center: MENU */}
+          <button
+            type="button"
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            onClick={() => setMobileOpen((prev) => !prev)}
+            className="inline-flex h-11 w-11 items-center justify-center rounded-md border border-white/10 bg-[#202736] text-[#ffd34d] transition duration-300 hover:border-[#ff8a00]/40 hover:bg-[#252d3d] hover:text-[#ff8a00]"
+          >
+            {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
           {/* RIGHT: SEARCH */}
-          <a
+          {/* <a
             href="#"
             aria-label="Search"
             className="inline-flex h-11 w-11 items-center justify-center rounded-md border border-white/10 bg-[#202736] text-[#ffd34d] transition duration-300 hover:border-[#ff8a00]/40 hover:bg-[#252d3d] hover:text-[#ff8a00]"
           >
             <Search size={18} />
-          </a>
+          </a> */}
         </div>
 
         {/* MOBILE MENU PANEL */}
