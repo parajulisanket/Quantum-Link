@@ -154,9 +154,9 @@ export default function JackpotRewardSystem() {
                   {/* button */}
                   <div className="mt-12 flex justify-center transition-transform duration-300 group-hover:-translate-y-1">
                     {isOrangeCard ? (
-                      <GameButton2 href="#contact" label="View Details" />
+                      <GameButton2 href="/reward" label="View Details" />
                     ) : (
-                      <GameButton href="#contact" label="View Details" />
+                      <GameButton href="/reward" label="View Details" />
                     )}
                   </div>
                 </div>

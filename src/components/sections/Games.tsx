@@ -268,7 +268,7 @@ export default function Games() {
               <button
                 type="button"
                 onClick={scrollLeft}
-                className="group relative flex h-16 w-16 items-center justify-center border border-white bg-white text-black transition duration-300 hover:scale-105 hover:bg-white hover:text-black"
+                className="relative flex  items-center justify-center  text-white cursor-pointer"
                 style={{
                   clipPath:
                     "polygon(0% 20%, 20% 0%, 100% 0%, 100% 100%, 20% 100%, 0% 80%)",
@@ -292,7 +292,7 @@ export default function Games() {
               <button
                 type="button"
                 onClick={scrollRight}
-                className="group relative flex h-16 w-16 items-center justify-center border border-white bg-white text-black transition duration-300 hover:scale-105 hover:bg-white hover:text-black"
+                className="relative flex  items-center justify-center  text-white cursor-pointer"
                 style={{
                   clipPath:
                     "polygon(0% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 0% 100%)",

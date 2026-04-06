@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { LoadingLink as Link } from "@/components/PageTransitionLoader";
 import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 import GameButton from "../ui/GameButton";
 
@@ -42,7 +43,7 @@ export default function Footer() {
           <div className="flex flex-col lg:flex-row justify-between items-start gap-10">
             <div className="max-w-lg">
               <h2 className="heading mb-4">Stay Up To Date</h2>
-              <p className="text-muted-foreground text-lg leading-relaxed">
+              <p className="text-white/80 text-lg leading-relaxed">
                 Have questions or feedback? We'd love to hear from you. Reach
                 out to our team or use our contact form.
               </p>
@@ -52,13 +53,13 @@ export default function Footer() {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 bg-transparent backdrop-blur-sm border border-[#FFD34D]/50  px-4 py-2 outline-none text-white placeholder:text-[#818898] focus:border-[#FF6A1F] transition-colors"
+                  className="flex-1 bg-transparent backdrop-blur-sm border border-[#FFD34D]/50  px-4 py-2 outline-none text-white placeholder:text-white/80 focus:border-[#FF6A1F] transition-colors"
                 />
                 <GameButton label="Subscribe" />
               </div>
               <div className="mt-4 flex items-center gap-3">
                 <div className="w-4 h-4 rounded-full bg-[#FFD34D]" />
-                <p className="text-sm text-[#818898]">
+                <p className="text-sm text-white/80">
                   I agree with{" "}
                   <span className="text-[#ff8a00] cursor-pointer">
                     Privacy Policy
@@ -106,10 +107,10 @@ export default function Footer() {
           <FooterColumn>
             <h4 className="text-4xl font-bold mb-8">Quick Links</h4>
             <ul className="space-y-4 text-white/80">
-              <FooterLink label="Product" />
-              <FooterLink label="Games" />
-              <FooterLink label="Features" />
-              <FooterLink label="Jackpot" />
+              <FooterLink label="Platform" href="/platform" />
+              <FooterLink label="Games" href="/games" />
+              <FooterLink label="Features" href="/features" />
+              <FooterLink label="Reward" href="/reward" />
             </ul>
           </FooterColumn>
 
@@ -117,9 +118,9 @@ export default function Footer() {
           <FooterColumn>
             <h4 className="text-4xl font-bold mb-8">Explore</h4>
             <ul className="space-y-4 text-white/80">
-              <FooterLink label="Hardware" />
-              <FooterLink label="Solution" />
-              <FooterLink label="Contact" />
+              <FooterLink label="Hardware" href="/hardware" />
+              <FooterLink label="Solutions" href="/solutions" />
+              <FooterLink label="Contact" href="/contact" />
             </ul>
           </FooterColumn>
 
@@ -127,10 +128,10 @@ export default function Footer() {
           <FooterColumn>
             <h4 className="text-4xl font-bold mb-8">Follow Us</h4>
             <ul className="space-y-4 text-white/80 ">
-              <FooterLink label="Twitter" />
-              <FooterLink label="Facebook" />
-              <FooterLink label="Instagram" />
-              <FooterLink label="YouTube" />
+              <FooterLink label="Twitter" href="https://twitter.com" />
+              <FooterLink label="Facebook" href="https://facebook.com" />
+              <FooterLink label="Instagram" href="https://instagram.com" />
+              <FooterLink label="YouTube" href="https://youtube.com" />
             </ul>
           </FooterColumn>
         </div>
@@ -150,7 +151,7 @@ export default function Footer() {
             </a>
           </div>
           <p className="md:text-right">
-            Designed by{" "}
+            Developed by{" "}
             <span className="text-[#ff8a00] font-black">Kantipur InfoTech</span>
           </p>
         </div>
@@ -217,11 +218,11 @@ function SocialBox({
   );
 }
 
-function FooterLink({ label }: { label: string }) {
+function FooterLink({ label, href }: { label: string; href: string }) {
   return (
     <li className="list-none">
-      <a
-        href="#"
+      <Link
+        href={href}
         className="group relative flex items-center py-1 text-gray-400 transition-all duration-300 ease-in-out hover:text-white"
       >
         <span className="relative flex items-center justify-center overflow-hidden transition-all duration-300 ease-in-out w-0 opacity-0 group-hover:w-4 group-hover:opacity-100 group-hover:mr-3"></span>
@@ -231,7 +232,7 @@ function FooterLink({ label }: { label: string }) {
         </span>
 
         <span className="absolute bottom-0 left-7 h-[1px] w-0 bg-gradient-to-r from-[#ff8a00] to-transparent transition-all duration-500 group-hover:w-1/2" />
-      </a>
+      </Link>
     </li>
   );
 }

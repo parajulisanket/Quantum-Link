@@ -43,7 +43,7 @@ export default function AboutProduct() {
               </motion.p>
               <span className="animate-line-side delay-animation" />
             </div>
-            <h2 className="mx-auto max-w-3xl   heading">
+            <h2 className="mx-auto max-w-3xl  heading">
               What is Quantum Link?
             </h2>
           </div>

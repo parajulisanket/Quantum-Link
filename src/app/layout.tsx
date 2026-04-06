@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Oxanium, Barlow } from "next/font/google";
 import "./globals.css";
+import PageTransitionLoader from "@/components/PageTransitionLoader";
 
 const oxanium = Oxanium({
   variable: "--font-oxanium",
@@ -29,7 +30,9 @@ export default function RootLayout({
       lang="en"
       className={`${oxanium.variable} ${barlow.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-[#0b1220]">
+        <PageTransitionLoader>{children}</PageTransitionLoader>
+      </body>
     </html>
   );
 }

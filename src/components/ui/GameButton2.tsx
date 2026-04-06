@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { LoadingLink as Link } from "@/components/PageTransitionLoader";
 
 export default function GameButton2({ label = "BUY NOW", href = "#" }) {
   return (
@@ -8,14 +8,14 @@ export default function GameButton2({ label = "BUY NOW", href = "#" }) {
       <motion.div
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="inline-block p-[2px]"
+        className="inline-block p-[2px] "
         style={{
           backgroundColor: "white",
           clipPath: "polygon(10% 0, 100% 0, 100% 65%, 90% 100%, 0 100%, 0 35%)",
         }}
       >
         <button
-          className="relative overflow-hidden px-9 py-3 transition-colors duration-500"
+          className="relative overflow-hidden px-9 py-3 transition-colors duration-500 cursor-pointer"
           style={{
             backgroundColor: "#151C29",
             clipPath:

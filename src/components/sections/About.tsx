@@ -96,7 +96,7 @@ export default function About() {
           </p>
 
           <div className="mt-10">
-            <GameButton label="Explore Platform" href="#platform" />
+            <GameButton label="Explore Platform" href="/platform" />
           </div>
         </div>
       </div>
