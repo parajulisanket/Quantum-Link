@@ -51,11 +51,8 @@ export default function PageTransitionLoader({
             <div className="absolute h-28 w-28 rounded-full bg-[#ff8a00]/20 blur-3xl" />
             <div className="relative flex items-center justify-center">
               <div className="absolute h-20 w-20 animate-ping rounded-full bg-[#ff8a00]/20" />
-              <div className="h-16 w-16 animate-spin rounded-full border-4 border-[#ffd34d]/20 border-t-[#ff8a00]" />
+              <div className="h-20 w-20 animate-spin rounded-full border-8 border-[#ffd34d]/20 border-t-[#ff8a00]" />
             </div>
-            <p className="mt-5 font-[var(--font-heading)] text-2xl font-semibold tracking-wide text-white">
-              LOADING...
-            </p>
           </div>
         </div>
       )}

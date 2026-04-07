@@ -314,7 +314,7 @@ export default function PlatformPage() {
                         className="relative overflow-hidden rounded-[24px] border border-white/10 bg-[#060816]"
                       >
                         <Image
-                          src="/images/QL-logo.png"
+                          src="/images/QL-Logo.png"
                           alt="Quantum Link"
                           width={900}
                           height={700}

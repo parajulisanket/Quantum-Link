@@ -234,3 +234,13 @@ h6 {
 .animate-move-dot {
   animation: move-dot ease-in-out infinite;
 }
+
+/* system overflow reward page */
+
+.card-cut-tl {
+  clip-path: polygon(22% 0, 100% 0, 100% 100%, 0 100%, 0 22%);
+}
+
+.card-cut-br {
+  clip-path: polygon(0 0, 100% 0, 100% 78%, 78% 100%, 0 100%);
+}

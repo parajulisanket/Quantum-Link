@@ -253,28 +253,101 @@ export default function RewardsPage() {
 
                 {/* RIGHT SIDE */}
                 <div className="grid gap-5 md:grid-cols-2">
-                  {rewardFeatures.map((feature, index) => {
-                    const Icon = feature.icon;
+                  {/* CARD 1 — cut top left */}
+                  <div
+                    className="group relative p-[1px] transition-all duration-300 hover:-translate-y-1 
+             hover:shadow-[0_0_0_1px_#ff8a00,0_14px_35px_rgba(255,138,0,0.18)]"
+                    style={{
+                      clipPath:
+                        "polygon(32px 0,100% 0,100% 100%,0 100%,0 32px)",
+                      background: "#5a5d63",
+                    }}
+                  >
+                    {/* hover border layer */}
+                    <div
+                      className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 "
+                      style={{
+                        clipPath:
+                          "polygon(32px 0,100% 0,100% 100%,0 100%,0 32px)",
+                        background: "#ff8a00",
+                      }}
+                    />
 
-                    return (
-                      <motion.div
-                        key={feature.title}
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, amount: 0.2 }}
-                        transition={{ duration: 0.5, delay: index * 0.07 }}
-                        className="group relative overflow-hidden  border border-[#5a5d63] bg-[#1f2228] p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[#ff8a00] hover:shadow-[0_0_0_1px_#ff8a00,0_14px_35px_rgba(255,138,0,0.18)]"
-                      >
-                        <div className="relative mb-5 flex h-14 w-14 items-center justify-center rounded-full border border-[#5a5d63] bg-[#181b20] transition-all duration-300 group-hover:border-[#ff8a00]">
-                          <Icon size={22} className="text-[#ff8a00]" />
-                        </div>
+                    <div
+                      className="relative h-full w-full bg-[#1f2228] p-6"
+                      style={{
+                        clipPath:
+                          "polygon(32px 0,100% 0,100% 100%,0 100%,0 32px)",
+                      }}
+                    >
+                      <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-full border border-[#5a5d63] bg-[#181b20] group-hover:border-[#ff8a00]">
+                        <Sparkles size={22} className="text-[#ff8a00]" />
+                      </div>
 
-                        <h3 className="relative font-[var(--font-heading)] text-xl text-left font-semibold text-white ">
-                          {feature.title}
-                        </h3>
-                      </motion.div>
-                    );
-                  })}
+                      <h3 className="font-[var(--font-heading)] text-xl font-semibold text-white">
+                        Progressive Jackpot Moments
+                      </h3>
+                    </div>
+                  </div>
+
+                  {/* CARD 2 */}
+                  <div className="group relative overflow-hidden border border-[#5a5d63] bg-[#1f2228] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#ff8a00] hover:shadow-[0_0_0_1px_#ff8a00,0_14px_35px_rgba(255,138,0,0.18)]">
+                    <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-full border border-[#5a5d63] bg-[#181b20] group-hover:border-[#ff8a00]">
+                      <Gift size={22} className="text-[#ff8a00]" />
+                    </div>
+
+                    <h3 className="font-[var(--font-heading)] text-xl font-semibold text-white">
+                      Reward-Driven Gameplay
+                    </h3>
+                  </div>
+
+                  {/* CARD 3 */}
+                  <div className="group relative overflow-hidden border border-[#5a5d63] bg-[#1f2228] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#ff8a00] hover:shadow-[0_0_0_1px_#ff8a00,0_14px_35px_rgba(255,138,0,0.18)]">
+                    <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-full border border-[#5a5d63] bg-[#181b20] group-hover:border-[#ff8a00]">
+                      <Zap size={22} className="text-[#ff8a00]" />
+                    </div>
+
+                    <h3 className="font-[var(--font-heading)] text-xl font-semibold text-white">
+                      Fast Bonus Excitement
+                    </h3>
+                  </div>
+
+                  {/* CARD 4 — cut bottom right */}
+                  <div
+                    className="group relative p-[1px] transition-all duration-300 hover:-translate-y-1 
+             hover:shadow-[0_0_0_1px_#ff8a00,0_14px_35px_rgba(255,138,0,0.18)]"
+                    style={{
+                      clipPath:
+                        "polygon(0 0,100% 0,100% calc(100% - 32px),calc(100% - 32px) 100%,0 100%)",
+                      background: "#5a5d63",
+                    }}
+                  >
+                    {/* hover border layer */}
+                    <div
+                      className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                      style={{
+                        clipPath:
+                          "polygon(0 0,100% 0,100% calc(100% - 32px),calc(100% - 32px) 100%,0 100%)",
+                        background: "#ff8a00",
+                      }}
+                    />
+
+                    <div
+                      className="relative h-full w-full bg-[#1f2228] p-6"
+                      style={{
+                        clipPath:
+                          "polygon(0 0,100% 0,100% calc(100% - 32px),calc(100% - 32px) 100%,0 100%)",
+                      }}
+                    >
+                      <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-full border border-[#5a5d63] bg-[#181b20] group-hover:border-[#ff8a00]">
+                        <Target size={22} className="text-[#ff8a00]" />
+                      </div>
+
+                      <h3 className="font-[var(--font-heading)] text-xl font-semibold text-white">
+                        Operator Control
+                      </h3>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
