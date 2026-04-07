@@ -150,7 +150,7 @@ export default function PlatformPage() {
                 }}
               >
                 <video
-                  src="/videos/video1.mp4"
+                  src="/videos/main-video.mp4"
                   autoPlay
                   loop
                   muted

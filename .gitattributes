@@ -1,0 +1,4 @@
+public/videos/main-video.mp4 filter=lfs diff=lfs merge=lfs -text
+public/videos/record1.mov filter=lfs diff=lfs merge=lfs -text
+public/videos/record2.mov filter=lfs diff=lfs merge=lfs -text
+public/videos/record3.mov filter=lfs diff=lfs merge=lfs -text
