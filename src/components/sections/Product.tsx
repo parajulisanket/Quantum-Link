@@ -26,23 +26,6 @@ export default function AboutProduct() {
         >
           {/* Top Heading */}
           <div className="text-center">
-            <div className="mb-5 flex items-center justify-center gap-4 overflow-hidden">
-              <span className="animate-line-side" />
-              <motion.p
-                initial={{ rotateX: -1800, opacity: 0, scale: 0.5 }}
-                whileInView={{ rotateX: 0, opacity: 1, scale: 1 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{
-                  duration: 1.5,
-                  ease: "easeOut",
-                  opacity: { duration: 0.3 },
-                }}
-                className="font-[var(--font-heading)] text-sm font-black uppercase tracking-[0.14em] text-[#ff8a00]"
-              >
-                Main Product
-              </motion.p>
-              <span className="animate-line-side delay-animation" />
-            </div>
             <h2 className="mx-auto max-w-3xl  heading">
               What is Quantum Link?
             </h2>

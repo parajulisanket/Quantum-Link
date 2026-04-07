@@ -111,9 +111,9 @@ function HardwareCard({
                 {card.title}
               </h3>
 
-              <p className="mt-4 max-w-[470px] text-sm leading-7 text-white/78 md:text-[1rem]">
+              {/* <p className="mt-4 max-w-[470px] text-sm leading-7 text-white/78 md:text-[1rem]">
                 {card.description}
-              </p>
+              </p> */}
             </div>
           </div>
         </div>

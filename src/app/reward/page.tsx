@@ -3,44 +3,47 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { LoadingLink as Link } from "@/components/PageTransitionLoader";
-import {
-  Home,
-  Trophy,
-  Coins,
-  RotateCcw,
-  SlidersHorizontal,
-} from "lucide-react";
+import { Home, Sparkles, Play, Gift, Zap, Target } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import GameButton from "@/components/ui/GameButton";
+import GameButton2 from "@/components/ui/GameButton2";
+import ParticlesBackground2 from "@/components/ui/ParticlesBackground2";
 
-const rewardPoints = [
+const rewardFeatures = [
   {
-    number: "01",
-    title: "Progressive jackpot system",
-    description:
-      "A built-in jackpot structure designed to grow excitement and keep players engaged for longer sessions.",
-    icon: Trophy,
+    icon: Sparkles,
+    title: "Progressive Jackpot Moments",
   },
   {
-    number: "02",
-    title: "Multiplier rewards",
-    description:
-      "Reward mechanics that amplify winning moments and create stronger anticipation during gameplay.",
-    icon: Coins,
+    icon: Gift,
+    title: "Reward-Driven Gameplay",
   },
   {
-    number: "03",
-    title: "Player retention mechanics",
-    description:
-      "Smart reward flow designed to encourage repeat play and improve long-term player engagement.",
-    icon: RotateCcw,
+    icon: Zap,
+    title: "Fast Bonus Excitement",
   },
   {
-    number: "04",
-    title: "Configurable reward structure",
-    description:
-      "Flexible settings that allow operators to tailor reward behavior based on platform strategy and goals.",
-    icon: SlidersHorizontal,
+    icon: Target,
+    title: "Operator Control",
+  },
+];
+
+const videoClips = [
+  {
+    title: "2X-2X-2X Jackpot Trigger ",
+    subtitle: "Big win arcade moment",
+    video: "/videos/jackpot1.mov",
+  },
+  {
+    title: "Multiplier Win ",
+    subtitle: "Fast-paced reward sequence",
+    video: "/videos/jackpot3.mp4",
+  },
+  {
+    title: "4X-4X-4X Reward Counter ",
+    subtitle: "Coins and bonus stacking",
+    video: "/videos/jackpot2.mov",
   },
 ];
 
@@ -49,6 +52,7 @@ export default function RewardsPage() {
     <>
       <Navbar />
 
+      <ParticlesBackground2 />
       <main className="text-white">
         {/* breadcrumbs */}
         <section className="relative z-10 overflow-hidden">
@@ -114,6 +118,204 @@ export default function RewardsPage() {
                 </div>
               </motion.div>
             </div>
+          </div>
+        </section>
+
+        {/* clips section */}
+        <section className="relative overflow-hidden  py-20">
+          <div className="mx-auto max-w-7xl px-6 md:px-10 space-y-8">
+            <div className="grid gap-8 lg:grid-cols-3">
+              {videoClips.map((clip, index) => (
+                <motion.div
+                  key={clip.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.65, delay: index * 0.08 }}
+                  className="group relative"
+                >
+                  <div className="game-card-shape relative overflow-hidden bg-[#101724] p-[2px] backdrop-blur-sm">
+                    <div className="border-frame"></div>
+
+                    <div className="game-card-shape relative aspect-[4/5] overflow-hidden bg-[#101724]">
+                      <video
+                        className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.04]"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                      >
+                        <source src={clip.video} type="video/mp4" />
+                      </video>
+
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
+
+                      {/* <div className="absolute left-4 bottom-22 flex h-11 w-11 items-center justify-center rounded-full border border-[#5a5d63] bg-[#181b20] transition-all duration-300 group-hover:border-[#ff8a00]">
+                        <Play
+                          size={16}
+                          strokeWidth={1.1}
+                          className="text-[#ff8a00]  fill-current"
+                        />
+                      </div> */}
+
+                      <div className="absolute bottom-5 left-5 right-5">
+                        <h3 className="mt-2 font-[var(--font-heading)] text-2xl font-semibold text-white">
+                          {clip.title}
+                        </h3>
+                        <p className="mt-2 text-lg text-white/65">
+                          {clip.subtitle}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+            <div className="">
+              <h2 className="heading">clips that show the reward energy</h2>
+            </div>
+          </div>
+        </section>
+        {/* full width featured video */}
+        <section className="relative h-[60vh] min-h-[680px] w-full overflow-hidden bg-[#0a0f18]">
+          {/* background video */}
+          <video
+            className="absolute inset-0 h-full w-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/images/jackpot.jpg"
+          >
+            <source src="/videos/jackpot.mp4" type="video/mp4" />
+          </video>
+
+          {/* dark overlay */}
+          <div className="absolute inset-0 bg-black/45" />
+
+          {/* bottom fade */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(10,15,24,0.88)_0%,rgba(10,15,24,0.36)_30%,rgba(10,15,24,0.1)_55%,rgba(10,15,24,0.35)_100%)]" />
+
+          {/* content */}
+          <div className="relative z-10 flex h-full items-end">
+            <div className="mx-auto w-full max-w-7xl px-6 pb-12 md:px-10 md:pb-16">
+              <motion.div
+                initial={{ opacity: 0, y: 35 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.7 }}
+                className="max-w-3xl"
+              >
+                <h2 className="heading">
+                  Experience the thrill of jackpot wins in motion
+                </h2>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* content section */}
+        <section className="relative overflow-hidden py-20">
+          <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-10">
+            {/* BIG GLASS CONTAINER */}
+            <div className="rounded-[28px] border border-white/10 bg-transparent backdrop-blur-sm px-6 py-12 shadow-[0_20px_80px_rgba(0,0,0,0.35)] md:px-10 md:py-16 lg:px-14">
+              <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+                {/* LEFT SIDE */}
+                <motion.div
+                  initial={{ opacity: 0, x: -28 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.7 }}
+                  className="flex flex-col justify-center"
+                >
+                  <div className="mb-5 flex items-center  gap-4 overflow-hidden">
+                    <span className="animate-line-side" />
+                    <motion.p
+                      initial={{ rotateX: -1800, opacity: 0, scale: 0.5 }}
+                      whileInView={{ rotateX: 0, opacity: 1, scale: 1 }}
+                      viewport={{ once: true, margin: "-100px" }}
+                      transition={{
+                        duration: 1.5,
+                        ease: "easeOut",
+                        opacity: { duration: 0.3 },
+                      }}
+                      className="font-[var(--font-heading)] text-sm font-black uppercase tracking-[0.14em] text-[#ff8a00]"
+                    >
+                      System Flow
+                    </motion.p>
+                    <span className="animate-line-side delay-animation" />
+                  </div>
+
+                  <h2 className="font-[var(--font-heading)] text-4xl font-bold leading-tight text-white md:text-5xl">
+                    Show players how rewards are earned, stacked, and unlocked.
+                  </h2>
+                </motion.div>
+
+                {/* RIGHT SIDE */}
+                <div className="grid gap-5 md:grid-cols-2">
+                  {rewardFeatures.map((feature, index) => {
+                    const Icon = feature.icon;
+
+                    return (
+                      <motion.div
+                        key={feature.title}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 0.5, delay: index * 0.07 }}
+                        className="group relative overflow-hidden  border border-[#5a5d63] bg-[#1f2228] p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[#ff8a00] hover:shadow-[0_0_0_1px_#ff8a00,0_14px_35px_rgba(255,138,0,0.18)]"
+                      >
+                        <div className="relative mb-5 flex h-14 w-14 items-center justify-center rounded-full border border-[#5a5d63] bg-[#181b20] transition-all duration-300 group-hover:border-[#ff8a00]">
+                          <Icon size={22} className="text-[#ff8a00]" />
+                        </div>
+
+                        <h3 className="relative font-[var(--font-heading)] text-xl text-left font-semibold text-white ">
+                          {feature.title}
+                        </h3>
+                      </motion.div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* bottom cta */}
+        <section className="relative overflow-hidden  py-20">
+          <div className="relative z-10 mx-auto max-w-5xl px-6 text-center md:px-10">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{ duration: 0.65 }}
+            >
+              <div className="mb-5 flex items-center justify-center gap-4 overflow-hidden">
+                <span className="animate-line-side" />
+                <motion.p
+                  initial={{ rotateX: -1800, opacity: 0, scale: 0.5 }}
+                  whileInView={{ rotateX: 0, opacity: 1, scale: 1 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{
+                    duration: 1.5,
+                    ease: "easeOut",
+                    opacity: { duration: 0.3 },
+                  }}
+                  className="font-[var(--font-heading)] text-sm font-black uppercase tracking-[0.14em] text-[#ff8a00]"
+                >
+                  Reward Showcase
+                </motion.p>
+                <span className="animate-line-side delay-animation" />
+              </div>
+
+              <h2 className="heading max-w-6xl">More excitement. More wins.</h2>
+
+              <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+                <GameButton label="Request Demo" href="/contact" />
+
+                <GameButton2 label="Explore Games" href="/games" />
+              </div>
+            </motion.div>
           </div>
         </section>
       </main>

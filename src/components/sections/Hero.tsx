@@ -18,9 +18,13 @@ export default function Hero() {
       {/* <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.08),_transparent_55%)]" /> */}
 
       {/* MAIN CONTENT */}
-      <div className="relative z-10 mx-auto grid min-h-[calc(100vh-68px)] lg:min-h-[calc(100vh-136px)] max-w-7xl grid-cols-1 items-center gap-12 px-6 py-16 md:px-10 lg:grid-cols-2">
+      <div
+        className="relative z-10 mx-auto grid min-h-[calc(100vh-68px)] lg:min-h-[calc(100vh-136px)] max-w-7xl 
+    grid-cols-1 items-center gap-12 px-6 py-16 md:px-10 
+    lg:grid-cols-12"
+      >
         {/* LEFT SIDE */}
-        <div>
+        <div className="lg:col-span-6">
           <motion.h1
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
@@ -60,21 +64,20 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.94, x: 30 }}
           animate={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.25 }}
-          className="relative mx-auto flex w-full max-w-[900px] items-center justify-center"
+          className="relative mx-auto flex  w-full h-full min-h-[400px] lg:min-h-[600px] lg:col-span-6 items-center justify-center"
         >
           {/* <div className="absolute -inset-10  bg-gradient-to-r from-yellow-200/20 via-orange-300/20 to-red-400/20 blur-3xl" /> */}
 
           <motion.div
             animate={{ y: [0, -12, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="relative w-full"
+            className="relative w-full h-full"
           >
             <Image
-              src="/images/arcade-base1.png"
+              src="/images/arcade-base2.png"
               alt="Quantum Link Arcade"
-              width={1200}
-              height={1200}
-              className="w-full h-auto object-contain "
+              fill
+              className=" object-contain "
               priority
             />
           </motion.div>

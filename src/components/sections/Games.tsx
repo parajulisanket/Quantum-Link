@@ -128,7 +128,6 @@ export default function Games() {
 
   return (
     <section
-      id="games"
       className="relative overflow-hidden py-20 text-white"
       style={{
         background:

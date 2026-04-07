@@ -3,59 +3,11 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import Image from "next/image";
 import { LoadingLink as Link } from "@/components/PageTransitionLoader";
-import {
-  Home,
-  Zap,
-  ShieldCheck,
-  Gamepad2,
-  Layers3,
-  TrendingUp,
-} from "lucide-react";
+import { Home, Zap, Gamepad2, Layers3 } from "lucide-react";
 import { useRef } from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ParticlesBackground2 from "@/components/ui/ParticlesBackground2";
-
-const features = [
-  "Multi-game integration in one system",
-  "High-performance engine",
-  "Smooth animations and transitions",
-  "Advanced graphics and textures",
-  "Scalable architecture",
-  "Easy system management",
-];
-
-const choose8LinePoints = [
-  {
-    icon: Zap,
-    title: "Innovative gaming platform",
-    desc: "Built with a modern approach that combines engaging gameplay, strong performance, and a future-ready platform structure.",
-  },
-  {
-    icon: Gamepad2,
-    title: "High-quality game design",
-    desc: "Every experience is crafted to feel immersive, visually polished, and exciting for players in arcade environments.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Reliable and scalable system",
-    desc: "The platform is designed to run smoothly and expand easily as operator needs, locations, and game libraries grow.",
-  },
-  {
-    icon: Layers3,
-    title: "Continuous updates",
-    desc: "8Line focuses on ongoing improvement through updates, refinements, and new additions that keep the platform competitive.",
-  },
-];
-
-const quantumLinkHighlights = [
-  "Unified multi-game arcade engine",
-  "Premium game integration",
-  "Operator-friendly platform structure",
-  "Seamless performance across experiences",
-  "Built for engagement and revenue",
-  "Scalable for modern gaming environments",
-];
 
 const betterPoints = [
   {
@@ -265,84 +217,6 @@ export default function PlatformPage() {
                 entertainment into a modern, high-impact platform.
               </p>
             </motion.div>
-          </div>
-        </section>
-
-        {/* why choose 8line */}
-        <section className="relative overflow-hidden py-20">
-          <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-10">
-            <motion.div
-              initial={{ opacity: 0, y: 28 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.25 }}
-              transition={{ duration: 0.6 }}
-              className="mx-auto mb-14 max-w-3xl text-center"
-            >
-              <div className="mb-5 flex items-center justify-center gap-4 overflow-hidden">
-                <span className="animate-line-side" />
-                <motion.p
-                  initial={{ rotateX: -1800, opacity: 0, scale: 0.5 }}
-                  whileInView={{ rotateX: 0, opacity: 1, scale: 1 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{
-                    duration: 1.5,
-                    ease: "easeOut",
-                    opacity: { duration: 0.3 },
-                  }}
-                  className="font-[var(--font-heading)] text-sm font-black uppercase tracking-[0.14em] text-[#ff8a00]"
-                >
-                  Why Choose 8Line
-                </motion.p>
-                <span className="animate-line-side delay-animation" />
-              </div>
-              <h2 className="font-[var(--font-heading)] text-3xl font-bold text-white md:text-5xl">
-                Built with innovation, quality, and long-term platform strength
-              </h2>
-              <p className="mt-5 text-base leading-8 text-white/72 md:text-lg">
-                8Line focuses on delivering a modern gaming platform experience
-                that combines premium design, dependable technology, and
-                scalable performance for operators who want more than a standard
-                arcade solution.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-              {choose8LinePoints.map((item, index) => {
-                const Icon = item.icon;
-
-                return (
-                  <motion.div
-                    key={item.title}
-                    initial={{ opacity: 0, y: 24 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.2 }}
-                    transition={{ duration: 0.5, delay: index * 0.08 }}
-                    className="group relative overflow-hidden border border-[#5a5d63] bg-[#202228] p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[#ff8a00] hover:shadow-[0_0_0_1px_#ff8a00,0_14px_35px_rgba(255,138,0,0.18)]"
-                  >
-                    <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,138,0,0.10),transparent_45%)] opacity-0 transition duration-300 group-hover:opacity-100" />
-
-                    <div className="relative z-10 flex items-start gap-4">
-                      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-[#5a5d63] bg-[#181b20] text-[#ffd34d]">
-                        <Icon
-                          size={24}
-                          strokeWidth={2.1}
-                          className="text-[#ff8a00]"
-                        />
-                      </div>
-
-                      <div>
-                        <h3 className="font-[var(--font-heading)] text-xl uppercase leading-snug font-black text-white">
-                          {item.title}
-                        </h3>
-                        <p className="mt-3 text-sm leading-7 text-white/72 md:text-[15px]">
-                          {item.desc}
-                        </p>
-                      </div>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
           </div>
         </section>
 
