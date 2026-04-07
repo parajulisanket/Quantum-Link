@@ -311,7 +311,7 @@ export default function PlatformPage() {
 
                       <div
                         style={{ transform: "translateZ(40px)" }}
-                        className="relative overflow-hidden rounded-[24px] border border-white/10 bg-[#060816]"
+                        className="relative overflow-hidden rounded-[24px] border border-white/10 bg-[#202228]"
                       >
                         <Image
                           src="/images/QL-Logo.png"
