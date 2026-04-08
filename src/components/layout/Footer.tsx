@@ -16,10 +16,10 @@ export default function Footer() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none"
       >
-        <source src="/videos/video1.mp4" type="video/mp4" />
+        <source src="/videos/footer-video.mov" type="video/mp4" />
       </video>
       {/* Black overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_#0B0E13_100%)] bg-black/10 pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_rgba(0,0,0,0.4)_60%,_rgba(0,0,0,0.8)_100%)] pointer-events-none" />
 
       {/* Decorative shapes */}
       <div className="absolute top-0 left-1/4 w-72 h-72 bg-[#FF6A1F]/5 rounded-full blur-3xl pointer-events-none" />
@@ -223,7 +223,7 @@ function FooterLink({ label, href }: { label: string; href: string }) {
     <li className="list-none">
       <Link
         href={href}
-        className="group relative flex items-center py-1 text-gray-400 transition-all duration-300 ease-in-out hover:text-white"
+        className="group relative flex items-center py-1 text-gray-300 transition-all duration-300 ease-in-out hover:text-white"
       >
         <span className="relative flex items-center justify-center overflow-hidden transition-all duration-300 ease-in-out w-0 opacity-0 group-hover:w-4 group-hover:opacity-100 group-hover:mr-3"></span>
 
