@@ -26,7 +26,7 @@ export default function About() {
               style={{ clipPath: "polygon(12% 0, 100% 0, 86% 100%, 0 100%)" }}
             >
               <video
-                src="/videos/main-video.mp4"
+                src="/videos/video.mp4"
                 autoPlay
                 loop
                 muted

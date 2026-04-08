@@ -152,7 +152,7 @@ export default function PlatformPage() {
                 
               >
                 <video
-                  src="/videos/main-video.mp4"
+                  src="/videos/video.mp4"
                   autoPlay
                   loop
                   muted
@@ -167,7 +167,7 @@ export default function PlatformPage() {
               <div className="absolute -bottom-6 -right-6 h-28 w-28 rounded-full bg-[#ff8a00]/20 blur-3xl" />
             </motion.div>
 
-            {/* RIGHT CONTENT */}
+            {/* RIGHT CONTENT */} 
             <motion.div
               initial={{ opacity: 0, x: 70 }}
               whileInView={{ opacity: 1, x: 0 }}
