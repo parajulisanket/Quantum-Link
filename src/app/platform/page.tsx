@@ -148,7 +148,7 @@ export default function PlatformPage() {
                 style={{
                   clipPath: "polygon(12% 0, 100% 0, 86% 100%, 0 100%)",
                 }}
-
+  
                 
               >
                 <video
