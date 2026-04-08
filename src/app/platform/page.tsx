@@ -194,7 +194,7 @@ export default function PlatformPage() {
                     display: "inline-block",
                   }}
                 >
-                  About Quantum Link cfghvjb
+                  About Quantum Link 
                 </motion.p>
 
                 <span className="animate-line-side delay-animation" />
